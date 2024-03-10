@@ -340,6 +340,7 @@ body.light .language-switch:focus {
   box-shadow: var(--dark-theme-box-shadow);
   background-color: var(--dark-theme-glass);
   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 
   text-transform: uppercase;
 
@@ -480,6 +481,7 @@ body.light .theme-switch::after {
   box-shadow: var(--dark-theme-box-shadow);
   background-color: var(--light-theme-glass);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   transition: transform 800ms var(--animation-cubic);
 }
 
@@ -557,6 +559,7 @@ body.light .select-language-mobile > .active {
   box-shadow: var(--dark-theme-box-shadow);
   background-color: var(--dark-theme-glass);
   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 
   transition: box-shadow var(--animation-time) var(--animation-cubic),
     background-color var(--animation-time) var(--animation-cubic);
