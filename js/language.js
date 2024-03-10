@@ -1,6 +1,8 @@
 import { languageArray } from "./lng.js";
 
 for (let key in languageArray) {
-  document.querySelector(".lng-" + key).innerHTML =
-    languageArray[key][document.documentElement.lang];
+  const selectorArray = document.querySelectorAll(".lng-" + key);
+  selectorArray.forEach((element) => {
+    element.innerHTML = languageArray[key][document.documentElement.lang];
+  });
 }

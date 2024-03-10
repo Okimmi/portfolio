@@ -1,6 +1,7 @@
 :root {
   --main-font-family: "Oxanium", sans-serif;
   --main-font-size: 16px;
+  --main-mobile-font-size: 14px;
 
   --black-color: #0f1721;
   --dark-blue-color: #222932;
@@ -13,7 +14,7 @@
   --yellow-color-light-theme: #fffba0;
   --blue-color-light-theme: #14adee;
   --dark-theme-glass: rgba(34, 41, 50, 0.4);
-  --light-theme-glass: rgba(181, 190, 202, 0.4);
+  --light-theme-glass: rgba(221, 225, 231, 0.4);
   --dark-theme-box-shadow: rgba(181, 190, 202, 0.1) 0px 0px 0px 1px;
   --light-theme-box-shadow: rgba(34, 41, 50, 0.1) 0px 0px 0px 1px;
 
@@ -52,13 +53,19 @@ p {
 
 body {
   font-family: var(--main-font-family);
-  font-size: var(--main-font-size);
+  font-size: var(--main-mobile-font-size);
 
   background-color: var(--dark-blue-color);
   color: var(--white-color);
 
   transition: color var(--animation-time) var(--animation-cubic),
     background-color var(--animation-time) var(--animation-cubic);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: var(--main-font-size);
+  }
 }
 
 body.light {
@@ -112,6 +119,33 @@ body.light {
 .section {
   padding-top: 80px;
   padding-bottom: 80px;
+}
+
+.background {
+  position: fixed;
+  right: -60px;
+  top: 40px;
+  z-index: -1;
+  width: 50vw;
+  height: 50vh;
+  transform: rotate(-16deg);
+  background-image: url("../icons/ok.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media screen and (min-width: 768px) {
+  .background {
+    right: 0;
+    top: 140px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .background {
+    right: 44px;
+    top: 52px;
+  }
 }
 
 /* ======= HEADER STYLES ======= */
@@ -439,13 +473,13 @@ body.light .theme-switch::after {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 10;
   width: 100vw;
   height: 100vh;
   transform: translateY(-100%);
-
   box-shadow: var(--dark-theme-box-shadow);
   background-color: var(--light-theme-glass);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(8px);
   transition: transform 800ms var(--animation-cubic);
 }
 
@@ -501,5 +535,87 @@ body.light .select-language-mobile > .active {
 @media screen and (min-width: 768px) {
   .mobile-menu {
     display: none;
+  }
+}
+
+/* ======= HERO STYLES ======= */
+
+@media screen and (min-width: 768px) {
+  #home {
+    min-height: 100vh;
+  }
+}
+
+.welcome-block {
+  margin-top: 100px;
+  padding: 24px 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  box-shadow: var(--dark-theme-box-shadow);
+  background-color: var(--dark-theme-glass);
+  backdrop-filter: blur(4px);
+
+  transition: box-shadow var(--animation-time) var(--animation-cubic),
+    background-color var(--animation-time) var(--animation-cubic);
+}
+
+body.light .welcome-block {
+  box-shadow: var(--light-theme-box-shadow);
+  background-color: var(--light-theme-glass);
+}
+
+@media screen and (min-width: 768px) {
+  .welcome-block {
+    width: 616px;
+    margin: 188px auto 0 auto;
+    padding: 24px 20px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .welcome-block {
+    position: absolute;
+    top: 50%;
+    left: 140px;
+    transform: translateY(-50%);
+    width: 800px;
+    margin: 0;
+    padding: 24px 24px;
+  }
+}
+
+.title {
+  font-weight: 300;
+  font-size: 48px;
+  color: var(--blue-color-dark-theme);
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 52px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .title {
+    font-size: 64px;
+  }
+}
+
+body.light .title {
+  color: var(--blue-color-light-theme);
+}
+
+.welcome-text {
+  line-height: 1.7;
+}
+
+@media screen and (min-width: 768px) {
+  .welcome-text {
+    width: 352px;
+    line-height: 1.5;
   }
 }
