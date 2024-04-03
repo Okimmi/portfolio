@@ -28,6 +28,7 @@ https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
 
     <!-- CSS styles -->
     <link rel="stylesheet" href="./css/styles.css" />
+     
   </head>
   <body class="preload">
     <header>
@@ -42,13 +43,13 @@ https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
             />
           </a>
           <ul class="list menu-list">
-            <li><a class="link active lng-home-menu" href="#home">Home</a></li>
-            <li><a class="link lng-about-menu" href="#about">About me</a></li>
+            <li><a class="link active lng-home-menu nav-js" href="#home">Home</a></li>
+            <li><a class="link lng-about-menu nav-js" href="#about">About me</a></li>
             <li>
-              <a class="link lng-projects-menu" href="#projects">Projects</a>
+              <a class="link lng-projects-menu nav-js" href="#projects">Projects</a>
             </li>
             <li>
-              <a class="link lng-contact-menu" href="#contact">Contact</a>
+              <a class="link lng-contact-menu nav-js" href="#contact">Contact</a>
             </li>
           </ul>
           <div class="switch-box">
@@ -97,14 +98,14 @@ https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
     <div class="mobile-menu mobile-menu-js">
       <ul class="list menu-list">
         <li>
-          <a class="link active lng-home-menu" href="#home">Home</a>
+          <a class="link active lng-home-menu nav-js" href="#home">Home</a>
         </li>
-        <li><a class="link lng-about-menu" href="#about">About me</a></li>
+        <li><a class="link lng-about-menu nav-js" href="#about">About me</a></li>
         <li>
-          <a class="link lng-projects-menu" href="#projects">Projects</a>
+          <a class="link lng-projects-menu nav-js" href="#projects">Projects</a>
         </li>
         <li>
-          <a class="link lng-contact-menu" href="#contact">Contact</a>
+          <a class="link lng-contact-menu nav-js" href="#contact">Contact</a>
         </li>
       </ul>
       <div class="switch-box">
@@ -124,7 +125,7 @@ https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
     <main>
       <div class="background"></div>
       <!-- Hero -->
-      <section id="home">
+      <section id="home" class="section-js">
         <div class="container">
           <div class="welcome-block">
             <p class="lng-hey">Hey, I am Olena Kim</p>
@@ -137,12 +138,187 @@ https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
               collaborate to bring your ideas to life!
             </p>
           </div>
+          <ul class="list home-media-block contact-line">
+            <li class="media-item">
+              <a
+                class="media-item-link"
+                href="https://www.linkedin.com/in/olena-kim/"
+                target="_blank"
+                rel="noreferrer noopener"
+                ><svg class="media-icon linkedin-icon" width="20" height="20">
+                  <use href="./icons/icons.svg#icon-logo-linkedin"></use></svg
+              ></a>
+            </li>
+            <li class="media-item">
+              <a
+                class="media-item-link"
+                href="https://github.com/Okimmi"
+                target="_blank"
+                rel="noreferrer noopener"
+                ><svg class="media-icon github-icon" width="20" height="20">
+                  <use href="./icons/icons.svg#icon-logo-github"></use></svg
+              ></a>
+            </li>
+            <li class="media-item">
+              <a
+                class="media-item-link"
+                href="https://www.facebook.com/elena.kim.315213"
+                target="_blank"
+                rel="noreferrer noopener"
+                ><svg class="media-icon facebook-icon" width="20" height="20">
+                  <use href="./icons/icons.svg#icon-logo-facebook"></use></svg
+              ></a>
+            </li class="media-item">
+            <li class="media-item">
+              <a
+                class="media-item-link"
+                href="https://www.instagram.com/kimmi_lena?igsh=dmgwcTN4eGlqeXYw"
+                target="_blank"
+                rel="noreferrer noopener"
+                ><svg class="media-icon instagram-icon" width="20" height="20">
+                  <use href="./icons/icons.svg#icon-logo-instagram"></use></svg
+              ></a>
+            </li>
+          </ul>
+          <ul class="list home-contacts-block ">
+            <li class="home-contact-item tel"><a class="link home-contact-link" href="tel:+48609522027" >+48 609 522 027</a></li>
+            <li class="home-contact-item mail"><a class="link home-contact-link" href="mailto:petrova1512@gmail.com">petrova1512@gmail.com</a></li>
+          </ul>
         </div>
       </section>
+       <!-- About -->
+      <section id="about" class="section-js">
+        <div class="container section-with-title">
+          <h2 class="lng-about-menu">about me</h2>
+          <ul class="list about-list about-list-btn-js">
+            <li><button class="about-btn" type="button" data-category="development">
+              <div class="about-btn-layer" data-category="development">
+                <div data-category="development"></div>
+                <div data-category="development"></div>
+                <div data-category="development"></div>
+                <div data-category="development"></div>
+                <div data-category="development"><svg class="about-btn-svg" width="80" height="80" data-category="development">
+                  <use href="./icons/icons.svg#icon-developer-mode" data-category="development"></use>
+                </svg></div>
+              </div>
+              <span class="about-btn-title lng-development" data-category="development">development</span>
+             
+            </button></li>
+            <li><button class="about-btn" type="button" data-category="work">
+              <div class="about-btn-layer"  data-category="work">
+                <div data-category="work"></div>
+                <div data-category="work"></div>
+                <div data-category="work"></div>
+                <div data-category="work"></div>
+                <div data-category="work"><svg class="about-btn-svg" width="80" height="80" data-category="work">
+                  <use href="./icons/icons.svg#icon-work-outline" data-category="work"></use>
+                </svg></div>
+              </div>
+              <span class="about-btn-title lng-work" data-category="work">work</span>
+            </button></li>
+            <li><button class="about-btn" type="button" data-category="hobbies">
+              <div class="about-btn-layer"  data-category="hobbies">
+                <div data-category="hobbies"></div>
+                <div data-category="hobbies"></div>
+                <div data-category="hobbies"></div>
+                <div data-category="hobbies"></div>
+                <div data-category="hobbies"><svg class="about-btn-svg" width="80" height="80" data-category="hobbies">
+                  <use href="./icons/icons.svg#icon-piano" data-category="hobbies"></use>
+                </svg></div>
+              </div>
+              <span class="about-btn-title lng-hobbies" data-category="hobbies">hobbies</span>
+            </button></li>
+          </ul>
+        </div>
+      </section>
+      <div class="modal-backdrop">
+        <div class="modal">
+          <svg class="close-btn close-modal-js" width="32" height="32">
+            <use href="./icons/icons.svg#icon-close"></use>
+          </svg>
+          <div class="modal-content modal-development-js">
+          <h2 class="lng-development">development</h2>
+          <p class="modal-text lng-developmentText">In 2022, I completed a Computer Science course based on the Stanford CSA106 curriculum, focusing on Java. These courses provided me with a solid foundation before delving deeper into programming. Following that, in 2023, I enrolled in a Fullstack Developer course, which lasted approximately 10 months. During this time, I acquired skills in JavaScript programming, as well as mastering HTML, CSS, React.js, Node.js, and TypeScript. Additionally, I became proficient in utilizing various libraries such as Redux, Material UI, Formik, Axios, Toaster, and many others. Although I had a knack for programming back in school, it wasn't until 2022 that I realized my passion for advancing in and working within this field.</p>
+          <h3 class="modal-secondary-title lng-techSkills">My tech skills</h3>
+          <div class="skills">
+          <ul class="skills-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>SASS</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>React.js</li>
+            <li>Redux</li>
+            <li>Node.js</li>
+          </ul>
+          <ul class="skills-list">
+            <li>GIT</li>
+            <li>Mongo DB</li>
+            <li>Axios</li>
+            <li>Formik</li>
+            <li>AJAX</li>
+            <li>REST</li>
+            <li>JAVA</li>
+            <li>Figma</li>
+          </ul>
+        </div>
+        <ul class="list btn-list">
+          <li class="btn-list-item"><a class="btn first-btn lng-diploma" href="https://diploma.programming.org.ua/en/d/yjk9o72YKB3lAPe0vodr4GpXqVEJWRxn"
+            target="_blank"
+            rel="noreferrer noopener">COMPUTER SCIENCE DIPLOMA</a></li>
+            <li class="btn-list-item"><a class="btn lng-certificate" href="https://drive.google.com/file/d/13LGZwYkRUNpTVsD5EwZI040RgTcq95lg/view"
+              target="_blank"
+              rel="noreferrer noopener">FULLSTACK DEVELOPER CERTIFICATE</a></li>
+        </ul>
+        </div>
+        <div class="modal-content modal-hobbies-js">
+          <h2 class="lng-hobbies">hobbies</h2>
+          <ul class="list hobbies-list">
+            <li class="hobbies-item">
+              <p class="lng-pianoText">I've been learning to play the piano since December 2023. I have a passion for listening to instrumental music and enjoy immersing myself in its melodies.</p>
+              <div class="media-hobbies-container">
+                <video controls loop width="100%">
+                  <source src="./video/piano.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+            </div>
+            </li>
+            <li class="hobbies-item">
+              <p class="lng-bookText">In my leisure time, I indulge in reading books, particularly focusing on fantasy and love story. Additionally, I have a creative side where I craft handmade book covers, adding a personal touch to my reading experiences.</p>
+              <div class="media-hobbies-container">
+                <img src="" alt="">
+              </div>
+            </li>
+          </ul>
+        </div>
+      <div class="modal-content modal-work-js">
+        <h2 class="lng-work">work</h2>
+        <p class="modal-text lng-workText">
+          Currently, I work as an Expert in Mortgage Loan Launch at PKO Bank Polski. I've been with the Bank since 2018, right after completing my studies. Initially, I started as an administrator in the deposit account servicing team, and after a year, I transferred to the mortgage loan team, where I've been working ever since. Throughout my career, I've had the opportunity not only to perform operational tasks but also to participate in the development of programs aimed at improving and automating processes. My most significant project involved creating a program primarily based on OCR technology. This program streamlined the work of administrators, increased productivity, and reduced the risk of errors during operations. In this project, I served as a business analyst, documenting requirements, explaining connections between programs to developers, supervising task execution, testing the program, and conducting training for employees. This project provided me with invaluable experience and sparked my interest in development. In addition to this project, I regularly participate in manual testing of innovations, monitor processes, advocate for development and automation, and conduct training for other employees.</p>
+          <img
+                class="pko-svg"
+                src="./icons/pko.svg"
+                alt="PKO logotype"
+                height="100"
+              />
+        </div>
+    </div>
+    </div>
+      
     </main>
     <footer></footer>
+        <!-- Lodash library script file -->
+        <script
+        async
+        src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+        integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
     <script src="./js/lng-select.js" type="module"></script>
     <script src="./js/language.js" type="module"></script>
     <script src="./js/mobile-menu.js" type="module"></script>
+    <script src="./js/modal.js" type="module"></script>
+    <script src="./js/scroll.js" type="module"></script>
   </body>
 </html>
