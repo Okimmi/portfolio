@@ -19,7 +19,6 @@ function onScroll() {
   nav.forEach((el) => {
     if (el.hash === `#${mostVisibleSection.id}`) {
       el.classList.add("active");
-      window.location.hash = mostVisibleSection.id;
     } else {
       el.classList.remove("active");
     }
