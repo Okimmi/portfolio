@@ -4,6 +4,7 @@ const modalWork = document.querySelector(".modal-work-js");
 const modalHobbies = document.querySelector(".modal-hobbies-js");
 const modalBackdrop = document.querySelector(".modal-backdrop");
 const closeModalBtn = document.querySelector(".close-modal-js");
+const videoContainer = document.querySelector(".video-container-js");
 
 aboutBtnList.addEventListener("click", onBtnClick);
 
@@ -18,6 +19,8 @@ function onBtnClick(e) {
       openModal(modalDevelopment);
       break;
     case "hobbies":
+      videoContainer.innerHTML =
+        '<iframe class="video-js" width="286" height="320" src="https://www.youtube.com/embed/svnHE0OV6DQ" frameborder="0"></iframe>';
       openModal(modalHobbies);
       break;
     case "work":
@@ -54,6 +57,10 @@ function openModal(modal) {
 }
 
 function closeModal(modal, onEsc, onBackdrop, onClose) {
+  if (modal.dataset.modal === "hobbies") {
+    videoContainer.removeChild(videoContainer.firstChild);
+  }
+
   modalBackdrop.classList.remove("open");
 
   setTimeout(() => {
